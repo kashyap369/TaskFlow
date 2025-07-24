@@ -2,12 +2,12 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/',
+  baseHref: 'https://kashyap369.github.io/TaskFlow/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "route": "/"
+    "route": "/TaskFlow"
   },
   {
     "renderMode": 2,
@@ -15,35 +15,35 @@ export default {
       "chunk-S4LQEZFE.js",
       "chunk-YECR6WQL.js"
     ],
-    "route": "/dashboard"
+    "route": "/TaskFlow/dashboard"
   },
   {
     "renderMode": 2,
     "preload": [
       "chunk-L6P3XZSA.js"
     ],
-    "route": "/tasks"
+    "route": "/TaskFlow/tasks"
   },
   {
     "renderMode": 2,
     "preload": [
       "chunk-GNFGXKIJ.js"
     ],
-    "route": "/projects"
+    "route": "/TaskFlow/projects"
   },
   {
     "renderMode": 2,
     "preload": [
       "chunk-XVAXMSVJ.js"
     ],
-    "route": "/team"
+    "route": "/TaskFlow/team"
   },
   {
     "renderMode": 2,
     "preload": [
       "chunk-TWS23EC7.js"
     ],
-    "route": "/calendar"
+    "route": "/TaskFlow/calendar"
   },
   {
     "renderMode": 2,
@@ -51,36 +51,36 @@ export default {
       "chunk-H2YQHVCO.js",
       "chunk-YECR6WQL.js"
     ],
-    "route": "/settings"
+    "route": "/TaskFlow/settings"
   },
   {
     "renderMode": 2,
     "preload": [
       "chunk-KQDXCQWK.js"
     ],
-    "route": "/reports"
+    "route": "/TaskFlow/reports"
   },
   {
     "renderMode": 2,
     "preload": [
       "chunk-TQCDD77H.js"
     ],
-    "route": "/time-tracking"
+    "route": "/TaskFlow/time-tracking"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 5120, hash: '95e8b1f45072cf0dcd64eb225314d4189c982fc4839d548ac83f5bc681b96393', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1049, hash: 'a547ee778bf69325f2b9be9a104ba9e56dd7c5fe1011e3c2160b1c0486b51504', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 5157, hash: '14c64f2b68f919447028768f3f4efbefdfdf58fa7d91cd00c8740247be8f870c', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1086, hash: '44e770c95614465be10235f544a63a4caf2deb8f31d8979f3bbdf1f7ece1261b', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
     'index.html': {size: 0, hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'settings/index.html': {size: 39430, hash: 'fd2c801c3c90a4ace4ba0ff3c82a94e2e988828545fe27a8ae0370489c2e8763', text: () => import('./assets-chunks/settings_index_html.mjs').then(m => m.default)},
-    'dashboard/index.html': {size: 47728, hash: '40ac456342fbc4a3674b63a6fe95191da8f817acc3ceb7564522a7105629d45c', text: () => import('./assets-chunks/dashboard_index_html.mjs').then(m => m.default)},
-    'calendar/index.html': {size: 39493, hash: 'bae094428bfadeac6ccc293f5b2cadc5deee16adb0bbc6cec73941b6065903cd', text: () => import('./assets-chunks/calendar_index_html.mjs').then(m => m.default)},
-    'reports/index.html': {size: 52165, hash: '18910dd39745926f5bf9b26d6fc29adcd389895b2004ce3cdc5716ec98212f02', text: () => import('./assets-chunks/reports_index_html.mjs').then(m => m.default)},
-    'projects/index.html': {size: 60529, hash: 'ae22b3ab518d90e8264dce19cbb55899b4e2106e3dd77c94731cff07b61664d4', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
-    'tasks/index.html': {size: 42020, hash: '4aeb62da6740e767b1cb39a8be1fd366a4bbc0c6950603318c8e6eadefa903ec', text: () => import('./assets-chunks/tasks_index_html.mjs').then(m => m.default)},
-    'time-tracking/index.html': {size: 45083, hash: '61c9c72de836d95679ef631fa7c0ee4fc910b44aeff65df6f0c1ea5e3ac0e32c', text: () => import('./assets-chunks/time-tracking_index_html.mjs').then(m => m.default)},
-    'team/index.html': {size: 78908, hash: '9345517632aff683f953309f48facdf67e7c907a4f46bb54b9879d5ded91d2fb', text: () => import('./assets-chunks/team_index_html.mjs').then(m => m.default)},
+    'dashboard/index.html': {size: 48061, hash: '8f4fb061e4b4f3d26c018793997c92beea737299212b3fcfdf6f2cf2da4bd3ea', text: () => import('./assets-chunks/dashboard_index_html.mjs').then(m => m.default)},
+    'settings/index.html': {size: 39763, hash: 'c989376f818d6126b90f10e75ee23db4367cc11c42656155cd3bf0adbad02f0e', text: () => import('./assets-chunks/settings_index_html.mjs').then(m => m.default)},
+    'tasks/index.html': {size: 42353, hash: '7f749c3f43012103524549429b9160b1bf5622140ab959d7c52060ce12309c4a', text: () => import('./assets-chunks/tasks_index_html.mjs').then(m => m.default)},
+    'time-tracking/index.html': {size: 45416, hash: '03d0ea552471c4cc8ef6f68524d983c81540b5f53127328f8ec8e647c73095a9', text: () => import('./assets-chunks/time-tracking_index_html.mjs').then(m => m.default)},
+    'projects/index.html': {size: 60862, hash: '554687ca241abb0c4f4317080c059998cef5ea3af8af32a21eaa6d7f870a6683', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
+    'reports/index.html': {size: 52494, hash: 'df720e4a0276b834d2e8ffe404b593f2357ef50f49392a0088b16b94460cec9d', text: () => import('./assets-chunks/reports_index_html.mjs').then(m => m.default)},
+    'team/index.html': {size: 79231, hash: 'ade6c0da953f443052f175366ec3a501244c438bac42abd1fb70bf65a013281a', text: () => import('./assets-chunks/team_index_html.mjs').then(m => m.default)},
+    'calendar/index.html': {size: 39826, hash: 'be279e15654b4a83b94d791e288990a0c30497b17ffd58d6ae3e8a22129349a2', text: () => import('./assets-chunks/calendar_index_html.mjs').then(m => m.default)},
     'styles-3FDS4ZVF.css': {size: 230916, hash: '635mquZSb2k', text: () => import('./assets-chunks/styles-3FDS4ZVF_css.mjs').then(m => m.default)}
   },
 };

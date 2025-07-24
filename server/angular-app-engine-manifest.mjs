@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: 'https://kashyap369.github.io/TaskFlow',
   supportedLocales: {
   "en-US": ""
 },

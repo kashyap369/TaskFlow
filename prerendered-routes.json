@@ -1,13 +1,13 @@
 {
   "routes": {
-    "/": {},
-    "/calendar": {},
-    "/dashboard": {},
-    "/projects": {},
-    "/reports": {},
-    "/settings": {},
-    "/tasks": {},
-    "/team": {},
-    "/time-tracking": {}
+    "/TaskFlow": {},
+    "/TaskFlow/calendar": {},
+    "/TaskFlow/dashboard": {},
+    "/TaskFlow/projects": {},
+    "/TaskFlow/reports": {},
+    "/TaskFlow/settings": {},
+    "/TaskFlow/tasks": {},
+    "/TaskFlow/team": {},
+    "/TaskFlow/time-tracking": {}
   }
 }
