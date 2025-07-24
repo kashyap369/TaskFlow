@@ -1,0 +1,13 @@
+{
+  "routes": {
+    "/TaskFlow5": {},
+    "/TaskFlow5/calendar": {},
+    "/TaskFlow5/dashboard": {},
+    "/TaskFlow5/projects": {},
+    "/TaskFlow5/reports": {},
+    "/TaskFlow5/settings": {},
+    "/TaskFlow5/tasks": {},
+    "/TaskFlow5/team": {},
+    "/TaskFlow5/time-tracking": {}
+  }
+}
