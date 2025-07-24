@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/TaskFlow',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
