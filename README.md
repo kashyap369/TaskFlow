@@ -1,59 +1,79 @@
-# TaskFlow
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
+# TaskFlow — Smart Task & Team Management System
 
-## Development server
+A brief description of what this project does and who it's for
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+- User & Company Registration
+Seamlessly sign up as an individual user or a company to manage employees, assign work, and track overall performance.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Smart Task Assignment
+Create and assign tasks to yourself or others. Managers or senior team members can assign tasks to juniors within the organization or project scope.
 
-```bash
-ng generate component component-name
-```
+- Project-Based Task Management
+Organize complex workflows by creating projects, breaking them down into sub-tasks, and tracking their individual completion rates.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Time Tracking
+Track when each task was completed and by whom, helping improve accountability and workflow transparency.
 
-```bash
-ng generate --help
-```
+- Role-Based Team Management
+Classify users based on their skills and qualifications — like Developer, Designer, Writer — and assign them to relevant teams.
+- Comprehensive Reports
+Generate performance reports filtered by week, month, or year. View and download detailed analytics for both individuals and entire teams.
+## 🛠️ Tech Stack
 
-## Building
+**Client:**  
+![Angular](https://img.shields.io/badge/Angular-20-red?style=for-the-badge&logo=angular&logoColor=white)
 
-To build the project run:
+![LucideAngular](https://img.shields.io/badge/LucideAngular-Icon_Library-lightgrey?style=for-the-badge&logo=lucide&logoColor=black)
 
-```bash
-ng build
-```
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-blueviolet?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Server:**  
+![.NET Core](https://img.shields.io/badge/.NET_Core-8-blue?style=for-the-badge&logo=dotnet&logoColor=white)
+## 🛠 Skills
 
-## Running unit tests
+![ASP.NET Framework](https://img.shields.io/badge/ASP.NET_Framework-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 
-```bash
-ng test
-```
+![Web API](https://img.shields.io/badge/Web_API-2C3E50?style=for-the-badge&logo=dotnet&logoColor=white)
 
-## Running end-to-end tests
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-For end-to-end (e2e) testing, run:
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-```bash
-ng e2e
-```
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+![.NET Framework](https://img.shields.io/badge/.NET_Framework-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 
-## Additional Resources
+![Bootstrap 5](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+![Angular](https://img.shields.io/badge/Angular-20-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+
+## 🚀 About Me
+👋 About Me
+I'm a passionate and results-driven .NET Full Stack Developer with a strong command of backend development using ASP.NET Core / .NET Framework, paired with hands-on expertise in AngularJS, JavaScript, HTML, CSS, and Bootstrap for building responsive, dynamic frontends.
+
+I specialize in designing scalable APIs, building real-world business applications, and integrating complex systems with clean architecture principles (SOLID, DRY, KISS). I thrive in full-stack environments where performance, maintainability, and developer experience matter.
+
+In every project I work on, I strive to:
+
+Write clean, readable, and testable code
+
+Use efficient database operations with Entity Framework Core, LINQ, and optimized SQL
+
+Follow component-based UI architecture for reusability
+
+Apply best practices for code organization, scalability, and performance
+
+🔄 I'm continuously learning modern tech stacks, improving JavaScript proficiency, and exploring cross-platform solutions like .NET MAUI and Playwright for automation.
+📈 I believe in iterative growth, building for the long term, and shipping value fast.
+
+“Code is a tool. Problem-solving is the skill.” – That’s how I approach every challenge.
+
