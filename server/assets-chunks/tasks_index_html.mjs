@@ -13,4 +13,4 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 <link rel="modulepreload" href="chunk-L6P3XZSA.js">
 
 
-<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"27":"t1"},"c":{"27":[{"i":"t1","r":1,"x":2}]}},{"c":{"6":[{"i":"c2132070427","r":1}]}},{"c":{"0":[{"i":"c2064488526","r":1}]}}]}</script></body></html>`;
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"27":"t0"},"c":{"27":[{"i":"t0","r":1,"x":2}]}},{"c":{"6":[{"i":"c2132070427","r":1}]}},{"c":{"0":[{"i":"c2064488526","r":1}]}}]}</script></body></html>`;
