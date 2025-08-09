@@ -1,0 +1,86 @@
+<div class="container-fluid py-3 px-2">
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <!-- Title & Subtitle -->
+    <div>
+      <h5 class="fw-bold mb-1">Reports & Analytics</h5>
+      <small class="text-muted">Comprehensive insights into your team's performance</small>
+    </div>
+
+    <!-- Controls -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Segmented Control -->
+      <div class="btn-group rounded border overflow-hidden">
+        <input type="radio" class="btn-check" name="timeRange" id="week" autocomplete="off">
+        <label class="btn btn-outline-light px-3" for="week">Week</label>
+
+        <input type="radio" class="btn-check" name="timeRange" id="month" autocomplete="off">
+        <label class="btn btn-outline-light px-3" for="month">Month</label>
+
+        <input type="radio" class="btn-check" name="timeRange" id="quarter" autocomplete="off">
+        <label class="btn btn-outline-light px-3" for="quarter">Quarter</label>
+
+        <input type="radio" class="btn-check" name="timeRange" id="year" autocomplete="off" checked>
+        <label class="btn btn-primary px-3" for="year">Year</label>
+      </div>
+
+      <!-- Export Button -->
+      <button class="btn btn-outline-secondary d-flex align-items-center gap-1">
+        <lucide-angular name="Download" size="16"></lucide-angular> Export
+      </button>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row g-3">
+    <div class="col-md-3">
+      <app-report-status-card
+        [label]="'Total Tasks'"
+        [value]="1247"
+        [change]="12"
+        [icon]="'Target'">
+      </app-report-status-card>
+    </div>
+
+    <div class="col-md-3">
+      <app-report-status-card
+        [label]="'Completed Tasks'"
+        [value]="830"
+        [change]="8"
+        [icon]="'TrendingUp'">
+      </app-report-status-card>
+    </div>
+
+    <div class="col-md-3">
+      <app-report-status-card
+        [label]="'Pending Reviews'"
+        [value]="147"
+        [change]="-5"
+        [icon]="'TrendingDown'">
+      </app-report-status-card>
+    </div>
+
+    <div class="col-md-3">
+      <app-report-status-card
+        [label]="'New Signups'"
+        [value]="68"
+        [change]="5"
+        [icon]="'Users'">
+      </app-report-status-card>
+    </div>
+  </div>
+</div>
+<div class="row mt-3 g-3 align-items-stretch">
+  <div class="col-lg-6 d-flex">
+    <div class="card flex-fill w-100 h-100">
+      <app-report-performence-trend class="h-100 d-block w-100"></app-report-performence-trend>
+    </div>
+  </div>
+  <div class="col-lg-6 d-flex">
+    <div class="card flex-fill w-100 h-100">
+      <app-report-team-performence class="h-100 d-block w-100"></app-report-team-performence>
+    </div>
+  </div>
+</div>
+<div class="row mt-4">
+  <app-report-analytics></app-report-analytics>
+</div>

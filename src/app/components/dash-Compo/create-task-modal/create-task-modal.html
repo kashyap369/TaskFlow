@@ -1,0 +1,47 @@
+<div class="modal">
+  <div class="modal-content">
+    <h2>Create New Task</h2>
+
+    <form [formGroup]="taskForm" (ngSubmit)="submitTask()">
+
+      <div class="form-group">
+        <label for="heading">Heading</label>
+        <input id="heading" type="text" formControlName="heading" placeholder="Enter task title" />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description" placeholder="Describe the task"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dueDate">Due Date</label>
+          <input id="dueDate" type="date" formControlName="dueDate" />
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <select id="priority" formControlName="priority">
+            <option value="">Select</option>
+            <option *ngFor="let p of priorities" [value]="p">{{ p }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" formControlName="status">
+            <option value="">Select</option>
+            <option *ngFor="let s of statuses" [value]="s">{{ s }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="submit" class="btn primary">Create Task</button>
+        <button type="button" class="btn secondary" (click)="close()">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>

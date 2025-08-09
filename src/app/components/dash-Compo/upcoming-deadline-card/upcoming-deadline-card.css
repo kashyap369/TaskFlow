@@ -1,0 +1,10 @@
+/* Base styling for hover effect */
+.hover-bg {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover state with pointer and background */
+.hover-bg:hover {
+  background-color: #f0f0f0; /* or any light hover color */
+  cursor: pointer;
+}

@@ -1,0 +1,58 @@
+<ul class="list-unstyled pt-lg-2">
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/dashboard" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/dashboard'); ">
+      <lucide-angular size="20" name="LayoutDashboard"></lucide-angular>
+      <span>Dashboard</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/tasks" routerLinkActive="SetActive"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom">
+      <lucide-angular size="20" name="CircleCheckBig"></lucide-angular>
+      <span>Tasks</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/projects" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/projects'); ">
+      <lucide-angular size="20" name="FolderOpen"></lucide-angular>
+      <span>Projects</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/calendar" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/calendar'); ">
+      <lucide-angular size="20" name="Calendar"></lucide-angular>
+      <span>Calendar</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/team" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/team'); ">
+      <lucide-angular size="20" name="Users"></lucide-angular>
+      <span>Team</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/time-tracking" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/time-tracking'); ">
+      <lucide-angular size="20" name="Clock"></lucide-angular>
+      <span>Time Tracking</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/reports" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/reports'); ">
+      <lucide-angular size="20" name="ChartColumn"></lucide-angular>
+      <span>Reports</span>
+    </a>
+  </li>
+  <li class="w-100 text-muted p-1">
+    <a routerLink="/settings" routerLinkActive="SetActive" [routerLinkActiveOptions]="{ exact: true }"
+      class="d-block d-flex gap-2 ps-3 py-2 text-decoration-none link-custom" (click)="navigate('/settings');">
+      <lucide-angular size="20" name="Settings"></lucide-angular>
+      <span>Settings</span>
+    </a>
+  </li>
+</ul>

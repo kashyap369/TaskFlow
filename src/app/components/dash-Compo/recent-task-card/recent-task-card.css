@@ -1,0 +1,15 @@
+.card {
+  background-color: #f9fbfd;
+}
+.badge {
+  font-size: 0.75rem;
+}
+
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.cursor-pointer:hover{
+  background-color: rgb(250, 231, 206)
+}

@@ -1,0 +1,28 @@
+<div class="card shadow-sm border-0 rounded-3 p-3 d-flex flex-row justify-content-between align-items-center">
+  <div>
+    <p class="text-muted mb-1 small fw-semibold">{{ label }}</p>
+    <h4 class="fw-bold">{{ value | number }}</h4>
+    <div class="d-flex align-items-center gap-1 small">
+      <lucide-angular
+        *ngIf="change >= 0"
+        name="TrendingUp"
+        size="14"
+        class="text-success">
+      </lucide-angular>
+      <lucide-angular
+        *ngIf="change < 0"
+        name="TrendingDown"
+        size="14"
+        class="text-danger">
+      </lucide-angular>
+      <span [ngClass]="{ 'text-success': change >= 0, 'text-danger': change < 0 }">
+        {{ change >= 0 ? '+' + change + '%' : change + '%' }}
+      </span>
+      <span class="text-muted ms-1">vs last month</span>
+    </div>
+  </div>
+
+  <div class="icon-wrapper d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10">
+    <lucide-angular [name]="icon" size="24" class="text-primary"></lucide-angular>
+  </div>
+</div>

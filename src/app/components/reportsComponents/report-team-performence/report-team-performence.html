@@ -1,0 +1,21 @@
+<div class="card shadow-sm border-0">
+  <div class="card-body">
+    <h6 class="fw-bold mb-4">Team Performance</h6>
+
+    <div *ngFor="let member of teamMembers" class="d-flex justify-content-between align-items-center p-3 mb-2 rounded bg-light-subtle">
+      <div>
+        <h6 class="mb-1">{{ member.name }}</h6>
+        <small class="text-muted">
+          Tasks: {{ member.tasks }} &nbsp;
+          Hours: {{ member.hours }} &nbsp;
+          Projects: {{ member.projects }}
+        </small>
+      </div>
+      <div class="text-end">
+        <h5 class="mb-0 fw-semibold">{{ member.efficiency }}%</h5>
+        <small class="text-muted">Efficiency</small>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="card p-4 shadow-sm">
+  <h5 class="fw-bold mb-3">Theme</h5>
+
+  <div class="d-flex gap-3 flex-wrap">
+    <div
+      *ngFor="let theme of themes"
+      class="theme-card border rounded-3 p-2 text-center flex-grow-1"
+      [ngClass]="{ 'theme-selected': selectedTheme === theme }"
+      (click)="selectTheme(theme)"
+    >
+      <div
+        class="theme-preview mb-2 rounded"
+        [ngClass]="{
+          'light-preview': theme === 'Light',
+          'dark-preview': theme === 'Dark',
+          'auto-preview': theme === 'Auto'
+        }"
+      ></div>
+      <div class="fw-semibold">{{ theme }}</div>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <div class="d-flex justify-content-end gap-2">
+    <button class="btn btn-outline-secondary d-flex align-items-center gap-1" (click)="onCancel()">
+      <lucide-angular name="X" size="16"></lucide-angular> Cancel
+    </button>
+    <button class="btn btn-primary d-flex align-items-center gap-1" (click)="onSave()">
+      <lucide-angular name="Save" size="16"></lucide-angular> Save Changes
+    </button>
+  </div>
+</div>

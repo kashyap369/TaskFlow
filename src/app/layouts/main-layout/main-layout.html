@@ -1,0 +1,17 @@
+<div class="d-flex vh-100 overflow-hidden">
+  <!-- Sidebar -->
+  <aside class="bg-white border-end" style="width: 250px; min-width: 250px;">
+    <app-aside-bar></app-aside-bar>
+  </aside>
+
+  <!-- Main Content Area -->
+  <div class="flex-grow-1 d-flex flex-column">
+    <!-- Top Navbar -->
+    <app-header></app-header>
+
+    <!-- Routed Content -->
+    <main class="flex-grow-1 overflow-auto p-4 bg-light">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

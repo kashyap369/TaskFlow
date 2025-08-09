@@ -1,0 +1,60 @@
+.status-dot {
+  height: 8px;
+  width: 8px;
+  background-color: #28a745;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.contact-info svg {
+  width: 16px;
+  height: 16px;
+  color: #6c757d;
+}
+
+.contact-info span {
+  font-size: 0.875rem;
+}
+
+.card h6 {
+  font-size: 1rem;
+}
+
+.card small {
+  font-size: 0.75rem;
+}
+
+.card .badge {
+  font-size: 0.75rem;
+  padding: 0.35em 0.6em;
+}
+
+.card .btn-light {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

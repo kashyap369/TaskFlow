@@ -1,0 +1,9 @@
+<div class="card p-3 shadow-sm rounded-2 border-0 d-flex flex-row justify-content-between align-items-center">
+  <div>
+    <small class="text-muted fw-semibold">{{ label }}</small>
+    <h5 class="fw-bold m-0">{{ value }}</h5>
+  </div>
+  <div [ngClass]="iconColorClass" class="rounded-3 p-2 d-flex align-items-center justify-content-center">
+    <lucide-angular [name]="iconName" size="30"></lucide-angular>
+  </div>
+</div>

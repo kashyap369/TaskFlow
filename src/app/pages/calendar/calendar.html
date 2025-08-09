@@ -1,0 +1,23 @@
+<!-- Header -->
+<div class="row text-white lh-1 py-1 px-2 align-items-center">
+  <div class="col-md-6">
+    <h5 class="fs-4 fw-semibold text-dark">Calendar</h5>
+    <span class="text-black-50 fw-semibold fs-6">Schedule and manage your meetings and events.</span>
+  </div>
+  <div class="col-md-6 d-flex justify-content-md-end mt-1 mt-md-0">
+    <button class="btn btn-primary d-flex align-items-center gap-2">
+      <lucide-angular name="Plus"></lucide-angular>
+      New Event
+    </button>
+  </div>
+</div>
+
+<div class="row pt-5">
+  <div class="col-9">
+    <app-calendar-compo></app-calendar-compo>
+  </div>
+  <div class="col-3 d-flex flex-column gap-3">
+    <app-calen-quid-action-card></app-calen-quid-action-card>
+    <app-upcoming-event-card></app-upcoming-event-card>
+  </div>
+</div>

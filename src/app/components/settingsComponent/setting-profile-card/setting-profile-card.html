@@ -1,0 +1,64 @@
+<div class="card p-4 rounded-4 shadow-sm">
+  <div class="d-flex gap-3 align-items-center mb-4">
+    <img src="assets/images/UserOne.jpg" alt="User" class="rounded-circle" width="64" height="64" />
+    <div>
+      <h6 class="fw-bold mb-0">Sarah Johnson</h6>
+      <div class="text-muted small">Project Manager</div>
+      <a href="#" class="text-primary small d-flex align-items-center gap-1 mt-1">
+        <lucide-angular name="Camera" size="14" class="text-primary"></lucide-angular>
+        Change Photo
+      </a>
+    </div>
+  </div>
+
+  <form>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label small text-muted">First Name</label>
+        <input type="text" class="form-control" [(ngModel)]="profile.firstName" name="firstName" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label small text-muted">Last Name</label>
+        <input type="text" class="form-control" [(ngModel)]="profile.lastName" name="lastName" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label small text-muted">Email</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white"><lucide-angular name="Mail" size="16"></lucide-angular></span>
+          <input type="email" class="form-control" [(ngModel)]="profile.email" name="email" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label small text-muted">Phone</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white"><lucide-angular name="Phone" size="16"></lucide-angular></span>
+          <input type="text" class="form-control" [(ngModel)]="profile.phone" name="phone" />
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label small text-muted">Location</label>
+        <div class="input-group">
+          <span class="input-group-text bg-white"><lucide-angular name="MapPin" size="16"></lucide-angular></span>
+          <input type="text" class="form-control" [(ngModel)]="profile.location" name="location" />
+        </div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label small text-muted">Bio</label>
+        <textarea class="form-control" rows="3" [(ngModel)]="profile.bio" name="bio"></textarea>
+      </div>
+    </div>
+
+    <hr class="my-4" />
+
+    <div class="d-flex justify-content-end gap-2">
+      <button type="button" class="btn btn-light" (click)="onCancel()">Cancel</button>
+      <button type="button" class="btn btn-primary d-flex align-items-center gap-1" (click)="onSave()">
+        <lucide-angular name="Save" size="16"></lucide-angular>
+        Save Changes
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="row mt-3">
+  <div class="col-3" (click)="onClick()">
+    <app-setting-opt-holder></app-setting-opt-holder>
+  </div>
+
+  <div class="col-9">
+    <app-setting-profile-card *ngIf="activeLabel === 'Profile'"></app-setting-profile-card>
+    <app-setting-nofification *ngIf="activeLabel === 'Notifications'"></app-setting-nofification>
+    <app-security-component *ngIf="activeLabel === 'Security'" ></app-security-component>
+    <app-appearance-component *ngIf="activeLabel ==='Appearance'"></app-appearance-component>
+    <app-integration-component *ngIf="activeLabel ==='Integrations'" ></app-integration-component>
+    <app-data-privacy-component *ngIf="activeLabel ==='Data & Privacy'"></app-data-privacy-component>
+
+
+    <!-- Add more like Security, Appearance etc. -->
+  </div>
+</div>

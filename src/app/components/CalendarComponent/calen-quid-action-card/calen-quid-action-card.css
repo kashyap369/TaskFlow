@@ -1,0 +1,13 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-bg:hover {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.text-purple {
+  color: #a855f7; /* Tailwind-like purple-500 */
+}

@@ -1,0 +1,28 @@
+<div class="card shadow-sm border-0 h-100">
+  <div class="card-body">
+    <h6 class="fw-bold mb-4">Performance Trends</h6>
+
+    <div *ngFor="let month of performanceData" class="mb-3">
+      <div class="card border-0 shadow-sm p-3 bg-light-subtle">
+        <div class="d-flex justify-content-between small fw-semibold mb-2">
+          <span>{{ month.name }}</span>
+          <span>
+            Tasks: {{ month.tasks }} |
+            Hours: {{ month.hours }} |
+            Efficiency: {{ month.efficiency }}%
+          </span>
+        </div>
+        <div class="progress" style="height: 6px;">
+          <div 
+            class="progress-bar bg-primary"
+            role="progressbar"
+            [style.width.%]="month.efficiency"
+            aria-valuemin="0"
+            aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

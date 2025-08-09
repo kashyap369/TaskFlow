@@ -1,0 +1,26 @@
+<div class="card border-0 shadow-sm rounded-4 p-3 bg-light-subtle cursor-pointer">
+  <div class="d-flex justify-content-between align-items-start  ">
+    <div>
+      <h6 class="fw-semibold mb-1">{{ title }}</h6>
+      <div class="text-muted small">{{ subtitle }}</div>
+      <div class="mt-2 d-flex gap-2">
+        <span class="badge rounded-pill fw-medium small px-3 py-1" [ngClass]="{
+        'text-white bg-danger ': priority === 'High',
+        'text-light bg-warning': priority === 'Medium',
+        'text-light bg-success ': priority === 'Low'
+      }">
+          <lucide-angular name="Flag" class="opacity-75" size="16"></lucide-angular>
+          {{ priority }}
+        </span>
+        <span class="badge rounded-pill bg-primary-subtle text-primary fw-medium small px-3 py-1">{{ status }}</span>
+      </div>
+    </div>
+    <div class="text-end">
+      <div class="text-muted small">{{ assignee }}</div>
+      <div class="d-flex align-items-center gap-1 justify-content-end text-muted small">
+        <lucide-angular name="Calendar" class="opacity-75" size="16"></lucide-angular>
+        <span>{{ dueDate }}</span>
+      </div>
+    </div>
+  </div>
+</div>

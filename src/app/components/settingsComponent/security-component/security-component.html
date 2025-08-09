@@ -1,0 +1,67 @@
+<div class="card p-4 shadow-sm">
+  <h5 class="fw-bold mb-3">Password & Authentication</h5>
+
+  <!-- Current Password -->
+  <div class="mb-3">
+    <label class="form-label">Current Password</label>
+    <div class="input-group">
+      <span class="input-group-text"><lucide-angular name="KeyRound" size="18"></lucide-angular></span>
+      <input type="password" class="form-control" placeholder="Enter current password" />
+    </div>
+  </div>
+
+  <!-- New Password -->
+  <div class="mb-3">
+    <label class="form-label">New Password</label>
+    <div class="input-group">
+      <span class="input-group-text"><lucide-angular name="KeyRound" size="18"></lucide-angular></span>
+      <input type="password" class="form-control" placeholder="Enter new password" />
+    </div>
+  </div>
+
+  <!-- Confirm Password -->
+  <div class="mb-4">
+    <label class="form-label">Confirm New Password</label>
+    <div class="input-group">
+      <span class="input-group-text"><lucide-angular name="KeyRound" size="18"></lucide-angular></span>
+      <input type="password" class="form-control" placeholder="Confirm new password" />
+    </div>
+  </div>
+
+  <!-- 2FA -->
+  <h5 class="fw-bold mt-4 mb-2">Two-Factor Authentication</h5>
+  <div class="alert bg-light d-flex justify-content-between align-items-center">
+    <div>
+      <div class="fw-semibold">Enable 2FA</div>
+      <small class="text-muted">Add an extra layer of security to your account</small>
+    </div>
+    <button class="btn btn-primary d-flex align-items-center gap-1">
+      <lucide-angular name="ShieldCheck" size="16"></lucide-angular>
+      Enable
+    </button>
+  </div>
+
+  <!-- Sessions -->
+  <h5 class="fw-bold mt-4 mb-2">Active Sessions</h5>
+  <div *ngFor="let session of sessions" class="border p-3 rounded-2 mb-2 bg-light d-flex justify-content-between align-items-center">
+    <div>
+      <div class="fw-semibold">{{ session.name }}</div>
+      <small>{{ session.device }}</small><br />
+      <small class="text-muted">Last active: {{ session.lastActive }}</small>
+    </div>
+    <div *ngIf="session.isCurrent" class="badge bg-success-subtle text-success px-2 py-1">Current</div>
+    <a *ngIf="!session.isCurrent" href="#" class="text-danger fw-medium d-flex align-items-center gap-1">
+      <lucide-angular name="X" size="16"></lucide-angular> Revoke
+    </a>
+  </div>
+
+  <!-- Actions -->
+  <div class="d-flex justify-content-end gap-2 mt-4">
+    <button class="btn btn-outline-secondary d-flex align-items-center gap-1">
+      <lucide-angular name="X" size="16"></lucide-angular> Cancel
+    </button>
+    <button class="btn btn-primary d-flex align-items-center gap-1">
+      <lucide-angular name="Save" size="16"></lucide-angular> Save Changes
+    </button>
+  </div>
+</div>

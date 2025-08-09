@@ -1,0 +1,45 @@
+<div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+  <div class="d-flex justify-content-between align-items-start">
+    <div class="d-flex flex-column  gap-3 align-items-start">
+      <div class="avatar-wrapper">
+        <img [src]="imageUrl" alt="User Image" class="avatar" />
+      </div>
+
+
+      <div>
+        <h6 class="fw-bold mb-1 text-dark">{{ name }}</h6>
+        <div class="text-muted small">{{ role }}</div>
+        <div class="text-success small d-flex align-items-center gap-1">
+          <span class="status-dot"></span> Online
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-sm btn-light">
+      <lucide-angular size="16" name="Ellipsis"></lucide-angular>
+    </button>
+  </div>
+
+  <div class="mt-3 small text-muted contact-info">
+    <div><lucide-angular size="16" name="AtSign"></lucide-angular><span>{{ email }}</span></div>
+    <div><lucide-angular size="16" name="Phone"></lucide-angular><span>{{ phone }}</span></div>
+    <div><lucide-angular size="16" name="MapPin"></lucide-angular><span>{{ location }}</span></div>
+    <div><lucide-angular size="16" name="Calendar"></lucide-angular><span>Joined {{ joinedDate }}</span></div>
+  </div>
+
+  <hr class="my-3" />
+
+  <div class="d-flex flex-column justify-content-between small fw-semibold text-muted">
+    <div>Tasks Completed : <span class="fw-bold text-dark">{{ tasksCompleted }}</span></div>
+    <div>Projects Led : <span class="fw-bold text-dark">{{ projectsLed }}</span></div>
+  </div>
+
+  <div class="mt-3">
+    <small class="text-muted fw-semibold">Skills</small>
+    <div class="mt-2 d-flex flex-wrap gap-2">
+      <span *ngFor="let skill of skills"
+        class="badge bg-light text-primary border border-primary fw-medium rounded-pill px-2 py-1">
+        {{ skill }}
+      </span>
+    </div>
+  </div>
+</div>

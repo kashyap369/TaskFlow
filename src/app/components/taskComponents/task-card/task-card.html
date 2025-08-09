@@ -1,0 +1,72 @@
+<div class="card border-0 shadow-sm rounded-4 p-3 mb-4">
+  <!-- Header: Title, Priority, Status, Ellipsis -->
+  <div class="d-flex justify-content-between align-items-start mb-3">
+    <div>
+      <h6 class="fw-semibold mb-2">{{ title }}</h6>
+      <div class="d-flex gap-2 align-items-center">
+        <!-- Priority Badge -->
+        <span
+          class="badge rounded-pill fw-medium d-inline-flex align-items-center gap-1"
+          [ngClass]="{
+            'bg-danger-subtle text-danger': priority === 'High',
+            'bg-warning-subtle text-warning': priority === 'Medium',
+            'bg-success-subtle text-success': priority === 'Low'
+          }">
+          <lucide-angular size="14" name="Flag" class="opacity-75"></lucide-angular>
+          <span>{{ priority }}</span>
+        </span>
+
+        <!-- Status Badge -->
+        <span
+          class="badge rounded-pill fw-medium d-inline-flex align-items-center gap-1"
+          [ngClass]="{
+            'bg-primary-subtle text-primary': status === 'In Progress',
+            'bg-warning-subtle text-warning': status === 'Pending',
+            'bg-success-subtle text-success': status === 'Completed'
+          }">
+          <lucide-angular size="14" name="Clock" class="opacity-75"></lucide-angular>
+          <span>{{ status }}</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Ellipsis Icon -->
+    <lucide-angular name="Ellipsis" size="18" class="text-muted mt-1"></lucide-angular>
+  </div>
+
+  <!-- Description -->
+  <p class="text-muted mb-3">{{ description }}</p>
+
+  <!-- Meta Info -->
+  <div class="d-flex flex-wrap align-items-center gap-4 mb-3 small text-muted">
+    <span class="d-inline-flex align-items-center gap-1">
+      <lucide-angular size="16" name="User" class="opacity-75"></lucide-angular>
+      {{ assignee }}
+    </span>
+    <span class="d-inline-flex align-items-center gap-1">
+      <lucide-angular size="16" name="Calendar" class="opacity-75"></lucide-angular>
+      Due {{ dueDate }}
+    </span>
+    <a href="#" class="text-primary fw-semibold text-decoration-none">{{ project }}</a>
+  </div>
+
+  <!-- Tags -->
+  <div class="d-flex flex-wrap gap-2 mb-3">
+    <span class="badge bg-light text-dark fw-normal" *ngFor="let tag of tags">{{ tag }}</span>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="d-flex align-items-center gap-2">
+    <div class="progress flex-grow-1" style="height: 8px;">
+      <div
+        class="progress-bar bg-primary"
+        role="progressbar"
+        [style.width.%]="progress"
+        [attr.aria-valuenow]="progress"
+        aria-valuemin="0"
+        aria-valuemax="100">
+      </div>
+    </div>
+    <span class="small fw-semibold text-muted">{{ progress }}%</span>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card shadow-sm border-0 rounded-4 p-3">
+    <div class="d-flex justify-content-between align-items-start">
+        <div>
+            <h6 class="text-muted mb-1">{{ title }}</h6>
+            <h3 class="fw-bold mb-1">{{ value }}</h3>
+            <div class="d-flex align-items-center" [ngClass]="'text-' + changeType">
+                <span class="fw-semibold">{{ change }}</span>
+                <span class="text-muted ms-1 small">{{ description }}</span>
+            </div>
+        </div>
+        <div class="rounded-3 p-2" [ngClass]="'bg-' + changeType + ' bg-opacity-10'">
+            <lucide-angular [name]="icon" [class]="'text-' + changeType"></lucide-angular>
+        </div>
+    </div>
+</div>

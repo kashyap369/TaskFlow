@@ -1,0 +1,35 @@
+<div class="card p-4 shadow-sm">
+  <h5 class="fw-bold mb-4">Connected Apps</h5>
+
+  <div class="row gy-3">
+    <div class="col-md-6" *ngFor="let app of apps">
+      <div class="border rounded-3 p-3 d-flex justify-content-between align-items-start bg-light h-100">
+        <div class="d-flex align-items-start gap-2">
+          <lucide-angular [name]="app.icon" size="24" class="mt-1"></lucide-angular>
+          <div>
+            <div class="fw-semibold">{{ app.name }}</div>
+            <small class="text-muted">{{ app.description }}</small>
+          </div>
+        </div>
+        <button
+          class="btn btn-sm"
+          [ngClass]="app.connected ? 'btn-outline-danger' : 'btn-outline-primary'"
+          (click)="toggleConnection(app)"
+        >
+          {{ app.connected ? 'Disconnect' : 'Connect' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <div class="d-flex justify-content-end gap-2">
+    <button class="btn btn-outline-secondary d-flex align-items-center gap-1" (click)="onCancel()">
+      <lucide-angular name="X" size="16"></lucide-angular> Cancel
+    </button>
+    <button class="btn btn-primary d-flex align-items-center gap-1" (click)="onSave()">
+      <lucide-angular name="Save" size="16"></lucide-angular> Save Changes
+    </button>
+  </div>
+</div>

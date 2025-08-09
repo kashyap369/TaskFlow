@@ -1,0 +1,45 @@
+<div class="card project-card p-3 shadow-sm rounded-4 border-0 h-100">
+  <div class="d-flex justify-content-between align-items-start mb-2">
+    <div>
+      <h6 class="fw-bold mb-1">{{ title }}</h6>
+      <p class="text-muted small mb-2">{{ description }}</p>
+      <div class="d-flex gap-2">
+        <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold">{{ status }}</span>
+        <span class="badge rounded-pill bg-danger-subtle text-danger fw-semibold">{{ priority }}</span>
+      </div>
+    </div>
+    <i class="bi bi-three-dots-vertical text-muted" role="button" title="More options"></i>
+  </div>
+
+  <div class="d-flex justify-content-between small fw-semibold text-muted mb-2">
+    <span>Progress</span>
+    <span>{{ progress }}%</span>
+  </div>
+  <div class="progress mb-3" style="height: 8px;">
+    <div class="progress-bar bg-primary" [style.width.%]="progress" role="progressbar"
+         [attr.aria-valuenow]="progress" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+
+  <ul class="list-unstyled small text-muted mb-3">
+    <li class="mb-1 d-flex justify-content-between align-items-center">
+      <span><lucide-angular size="16" name="Target" class="me-1"></lucide-angular> Tasks</span>
+      <span>{{ taskSummary }}</span>
+    </li>
+    <li class="mb-1 d-flex justify-content-between align-items-center">
+      <span><lucide-angular size="16" name="Calendar" class="me-1"></lucide-angular> Timeline</span>
+      <span>{{ timeline }}</span>
+    </li>
+    <li class="mb-1 d-flex justify-content-between align-items-center">
+      <span><lucide-angular size="16" name="TrendingUp" class="me-1"></lucide-angular> Budget</span>
+      <span>{{ budgetUsed }} / {{ budgetTotal }}</span>
+    </li>
+  </ul>
+
+  <hr class="my-2" />
+  <div class="d-flex align-items-center small">
+    <i class="bi bi-people me-2"></i>Team
+    <div class="ms-auto d-flex flex-wrap gap-1">
+      <span *ngFor="let member of team" class="badge bg-light border text-dark rounded-pill px-2 py-1">{{ member }}</span>
+    </div>
+  </div>
+</div>

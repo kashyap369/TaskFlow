@@ -1,0 +1,147 @@
+<div class="row align-items-center px-4">
+  <div class="col-md-6">
+    <h3 class="text-black fw-bold mb-1">Projects</h3>
+    <p class="fs-6 opacity-50 fw-semibold mb-0">Manage and track all your projects and their progress</p>
+  </div>
+  <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
+    <button class="btn btn-primary d-flex align-items-center gap-1">
+      <lucide-angular name="Plus" size="16"></lucide-angular>
+      New Project
+    </button>
+  </div>
+</div>
+<div class="row">
+    <div class="row gy-3">
+  <div class="col-md-3">
+    <app-proj-card-head
+      label="Total Projects"
+      [count]="6"
+      icon="Folder"
+      iconBgColor="bg-primary-subtle"
+      iconColor="text-primary">
+    </app-proj-card-head>
+  </div>
+
+  <div class="col-md-3">
+    <app-proj-card-head
+      label="In Progress"
+      [count]="3"
+      icon="Clock"
+      iconBgColor="bg-warning-subtle"
+      iconColor="text-warning">
+    </app-proj-card-head>
+  </div>
+
+  <div class="col-md-3">
+    <app-proj-card-head
+      label="Completed"
+      [count]="1"
+      icon="Target"
+      iconBgColor="bg-success-subtle"
+      iconColor="text-success">
+    </app-proj-card-head>
+  </div>
+
+  <div class="col-md-3">
+    <app-proj-card-head
+      label="Team Members"
+      [count]="12"
+      icon="Users"
+      iconBgColor="bg-purple-subtle"
+      iconColor="text-purple">
+    </app-proj-card-head>
+  </div>
+</div>
+
+</div>
+<div class="row g-4 mt-3">
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-proj-detail-card
+      title="Website Redesign"
+      description="Complete overhaul of the company website with modern design and..."
+      status="In Progress"
+      priority="High Priority"
+      [progress]="68"
+      taskSummary="16/24"
+      timeline="2024-12-01 - 2025-02-15"
+      budgetUsed="$28,500"
+      budgetTotal="$45,000"
+      [team]="['AC', 'MR', 'JS']">
+    </app-proj-detail-card>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-proj-detail-card
+      title="Mobile App Launch"
+      description="Develop and deploy a cross-platform mobile app for customers."
+      status="Pending"
+      priority="Medium Priority"
+      [progress]="20"
+      taskSummary="5/25"
+      timeline="2025-01-10 - 2025-03-30"
+      budgetUsed="$8,000"
+      budgetTotal="$30,000"
+      [team]="['RD', 'LS']">
+    </app-proj-detail-card>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-proj-detail-card
+      title="CRM Integration"
+      description="Integrate CRM system to automate sales and customer support tasks."
+      status="In Progress"
+      priority="Low Priority"
+      [progress]="45"
+      taskSummary="12/30"
+      timeline="2025-02-01 - 2025-04-15"
+      budgetUsed="$15,500"
+      budgetTotal="$25,000"
+      [team]="['SP', 'NL', 'KT']">
+    </app-proj-detail-card>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-proj-detail-card
+      title="Internal Portal Revamp"
+      description="Revamping internal HR and Finance portal for better usability."
+      status="Completed"
+      priority="High Priority"
+      [progress]="100"
+      taskSummary="40/40"
+      timeline="2024-10-01 - 2024-12-15"
+      budgetUsed="$22,000"
+      budgetTotal="$22,000"
+      [team]="['PK', 'AM']">
+    </app-proj-detail-card>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-proj-detail-card
+      title="Security Audit"
+      description="Conduct full application and infrastructure security audit."
+      status="Pending"
+      priority="High Priority"
+      [progress]="10"
+      taskSummary="2/18"
+      timeline="2025-03-01 - 2025-05-20"
+      budgetUsed="$5,000"
+      budgetTotal="$20,000"
+      [team]="['YT', 'GR']">
+    </app-proj-detail-card>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4">
+    <app-proj-detail-card
+      title="Analytics Dashboard"
+      description="Build an analytics dashboard for real-time business insights."
+      status="In Progress"
+      priority="Medium Priority"
+      [progress]="54"
+      taskSummary="18/33"
+      timeline="2025-01-25 - 2025-04-30"
+      budgetUsed="$18,000"
+      budgetTotal="$40,000"
+      [team]="['SC', 'VN', 'LP']">
+    </app-proj-detail-card>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="row align-items-center px-4">
+  <div class="col-md-6">
+    <h3 class="text-black fw-bold mb-1">Team</h3>
+    <p class="fs-6 opacity-50 fw-semibold mb-0">Manage your team members and their roles</p>
+  </div>
+  <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
+    <button class="btn btn-primary d-flex justify-content-center align-items-center gap-1">
+      <lucide-angular name="UserPlus" size="16"></lucide-angular>
+      <span class="">New Member</span>
+    </button>
+  </div>
+</div>
+
+<div class="row mt-3">
+  <div class="col-md-3 mb-3" *ngFor="let card of cards">
+    <app-team-header-card
+      [label]="card.label"
+      [value]="card.value"
+      [iconName]="card.icon"
+      [iconColorClass]="card.bgClass">
+    </app-team-header-card>
+  </div>
+</div>
+
+<div class="row mt-3 rounded-3 px-4 bg-white px-1 py-4">
+  <div class="col-md-9 d-flex flex-wrap gap-2">
+<button
+  class="btn btn-sm fw-semibold border-0 rounded-2"
+  *ngFor="let dept of departments"
+  [ngClass]="{
+    'bg-primary bg-opacity-10 text-white': dept.active,
+    'bg-secondary bg-opacity-10 text-muted': !dept.active
+  }"
+  (click)="selectDepartment(dept)">
+  {{ dept.name }} ({{ dept.count }})
+</button>
+
+
+  </div>
+
+  <div class="col-md-3 mt-3 mt-md-0 d-flex justify-content-end align-items-center gap-2">
+    <div class="input-group input-group-sm">
+      <span class="input-group-text bg-white border-end-0">
+        <lucide-angular name="Search" size="16"></lucide-angular>
+      </span>
+      <input type="text" class="form-control border-start-0" placeholder="Search team members..." />
+    </div>
+    <button class="btn btn-outline-secondary btn-sm">
+      <lucide-angular name="Filter" size="16"></lucide-angular>
+    </button>
+  </div>
+</div>
+
+<div id="TeamDetail" class="row mt-4 px-4">
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let member of teamMembers">
+    <app-team-member-detail-card
+      [imageUrl]="member.imageUrl"
+      [name]="member.name"
+      [role]="member.role"
+      [email]="member.email"
+      [phone]="member.phone"
+      [location]="member.location"
+      [joinedDate]="member.joinedDate"
+      [tasksCompleted]="member.tasksCompleted"
+      [projectsLed]="member.projectsLed"
+      [skills]="member.skills">
+    </app-team-member-detail-card>
+  </div>
+</div>
+
+

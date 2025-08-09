@@ -1,0 +1,9 @@
+<div class="card border-0 shadow-sm rounded-3 px-3 py-3 d-flex flex-row justify-content-between align-items-center proj-card-hover">
+  <div>
+    <div class="text-muted small fw-semibold">{{ label }}</div>
+    <div class="fs-3 fw-bold text-black">{{ count }}</div>
+  </div>
+  <div class="rounded-3 p-2 d-flex align-items-center justify-content-center" [ngClass]="iconBgColor">
+    <lucide-angular [name]="icon" [ngClass]="iconColor" size="24"></lucide-angular>
+  </div>
+</div>

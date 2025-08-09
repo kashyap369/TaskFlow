@@ -1,0 +1,23 @@
+.card {
+  min-height: 100px;
+}
+
+.bg-soft-blue {
+  background-color: rgba(59, 130, 246, 0.1); /* Soft blue */
+  color: #3b82f6;
+}
+
+.bg-soft-green {
+  background-color: rgba(34, 197, 94, 0.1); /* Soft green */
+  color: #22c55e;
+}
+
+.bg-soft-purple {
+  background-color: rgba(168, 85, 247, 0.1); /* Soft purple */
+  color: #a855f7;
+}
+
+.bg-soft-orange {
+  background-color: rgba(251, 146, 60, 0.1); /* Soft orange */
+  color: #fb923c;
+}

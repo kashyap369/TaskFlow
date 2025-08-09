@@ -1,0 +1,11 @@
+.card {
+  border-radius: 0.75rem;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+}

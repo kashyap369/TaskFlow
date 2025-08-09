@@ -1,0 +1,38 @@
+<div class="card border-0 shadow-sm rounded-4 p-3">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <!-- Left: chevrons + label -->
+    <div class="d-flex align-items-center gap-2">
+        <h5 class="fw-semibold mb-0 ms-2">{{ monthYearLabel }}</h5>
+      <button class="btn btn-light btn-sm" (click)="goToPreviousMonth()">
+        <lucide-angular size="16" name="ChevronLeft"></lucide-angular>
+      </button>
+      <button class="btn btn-light btn-sm" (click)="goToNextMonth()">
+        <lucide-angular size="16" name="ChevronRight"></lucide-angular>
+      </button>
+      
+    </div>
+
+    <!-- Right: controls -->
+    <div class="d-flex gap-2">
+      <button class="btn btn-outline-primary btn-sm" (click)="goToToday()">Today</button>
+      <div class="btn-group">
+        <button class="btn btn-primary btn-sm">Month</button>
+        <button class="btn btn-outline-secondary btn-sm">Week</button>
+        <button class="btn btn-outline-secondary btn-sm">Day</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="calendar-grid border-top">
+    <div class="calendar-header" *ngFor="let day of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']">{{ day }}</div>
+
+    <div
+      class="calendar-cell"
+      *ngFor="let day of calendarDays"
+      [class.disabled]="day.disabled"
+      [class.active]="day.active"
+    >
+      {{ day.label }}
+    </div>
+  </div>
+</div>

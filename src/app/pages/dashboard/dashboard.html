@@ -1,0 +1,95 @@
+<!-- Header -->
+<div class="row text-white py-1 px-2 align-items-center">
+  <div class="col-md-6">
+    <h5 class="fs-4 fw-semibold text-dark">Dashboard</h5>
+    <span class="text-black-50 fs-6">Welcome back, Sarah! Here's what's happening with your projects.</span>
+  </div>
+  <div class="col-md-6 d-flex justify-content-md-end mt-1 mt-md-0">
+    <button class="btn btn-primary d-flex align-items-center gap-2" (click)="openModal()">
+      <lucide-angular name="PlusCircle"></lucide-angular>
+      New Task
+    </button>
+
+  </div>
+</div>
+
+<!-- Cards -->
+<div class="row align-items-center mt-3">
+  <div class="col-md-3 mb-4">
+    <app-task-state-card title="Total Tasks" [value]="124" icon="CircleCheck" change="+12%" changeType="primary"
+      description="vs last month">
+    </app-task-state-card>
+  </div>
+
+  <div class="col-md-3 mb-4">
+    <app-task-state-card title="In Progress" [value]="24" icon="ClockAlert" change="+8%" changeType="warning"
+      description="vs last month">
+    </app-task-state-card>
+  </div>
+
+  <div class="col-md-3 mb-4">
+    <app-task-state-card title="Completed" [value]="89" icon="Goal" change="+15%" changeType="success"
+      description="vs last month">
+    </app-task-state-card>
+  </div>
+
+  <div class="col-md-3 mb-4">
+    <app-task-state-card title="Overdue" [value]="7" icon="CircleAlert" change="-12%" changeType="danger"
+      description="vs last month">
+    </app-task-state-card>
+  </div>
+</div>
+<div class="row justify-content-center mt-4 align-items-stretch">
+  <!-- Left Panel: Recent Tasks -->
+  <div class="col-lg-7 mb-4 d-flex">
+    <div class="card border-0 shadow-sm rounded-4 w-100 h-100">
+      <div class="card-body">
+        <h5 class="fw-semibold mb-3">Recent Tasks</h5>
+        <hr />
+        <div class="d-flex flex-column gap-3">
+          <app-recent-task-card title="Fix login bug" subtitle="Resolve session timeout issue" priority="High"
+            status="In Progress" assignee="Sarah" dueDate="Jul 10, 2025">
+          </app-recent-task-card>
+
+          <app-recent-task-card title="Dashboard UI Update" subtitle="Update padding and color scheme" priority="Medium"
+            status="Pending" assignee="Karan" dueDate="Jul 12, 2025">
+          </app-recent-task-card>
+
+          <app-recent-task-card title="Deploy v2.2" subtitle="Push stable release to production" priority="Low"
+            status="Completed" assignee="Neha" dueDate="Jul 08, 2025">
+          </app-recent-task-card>
+
+          <app-recent-task-card title="Refactor Auth Module" subtitle="Improve login service structure" priority="High"
+            status="In Progress" assignee="Sagar" dueDate="Jul 15, 2025">
+          </app-recent-task-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Panel: Upcoming Deadlines -->
+  <div class="col-md-4 mb-4 d-flex">
+    <div class="card border-0 shadow-sm rounded-4 w-100 h-100">
+      <div class="card-body">
+        <h5 class="fw-semibold mb-3">Upcoming Deadlines</h5>
+        <hr />
+        <div class="d-flex flex-column gap-3">
+          <app-upcoming-deadline-card title="Mobile app testing" priority="High" date="Jan 12">
+          </app-upcoming-deadline-card>
+
+          <app-upcoming-deadline-card title="Client presentation" priority="High" date="Jan 14">
+          </app-upcoming-deadline-card>
+
+          <app-upcoming-deadline-card title="Code review session" priority="Medium" date="Jan 16">
+          </app-upcoming-deadline-card>
+
+          <app-upcoming-deadline-card title="Team retrospective" priority="Low" date="Jan 18">
+          </app-upcoming-deadline-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-create-task-modal *ngIf="isModalVisible" (closeModal)="isModalVisible = false"></app-create-task-modal>
+
+
+</div>

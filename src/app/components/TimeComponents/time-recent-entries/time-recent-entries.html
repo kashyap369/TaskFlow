@@ -1,0 +1,21 @@
+<!-- time-recent-entries.html -->
+<div class="recent-entries w-100 p-1">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="fw-bold mb-0">Recent Entries</h5>
+    <lucide-icon name="filter" class="icon text-muted" style="width: 18px; height: 18px;"></lucide-icon>
+  </div>
+
+  <div class="entry p-3 mb-3 border rounded shadow-sm" *ngFor="let entry of entries">
+    <div class="d-flex justify-content-between flex-wrap">
+      <div class="entry-info">
+        <h6 class="fw-semibold mb-1">{{ entry.title }}</h6>
+        <p class="mb-1 text-muted small">{{ entry.category }}</p>
+        <p class="mb-0 text-muted small">{{ entry.date }} &nbsp;&nbsp; {{ entry.time }}</p>
+      </div>
+      <div class="entry-duration text-end mt-2 mt-sm-0">
+        <span class="fw-medium">{{ entry.duration }}</span><br />
+        <span class="badge bg-success-subtle text-success mt-1">completed</span>
+      </div>
+    </div>
+  </div>
+</div>

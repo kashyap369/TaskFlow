@@ -1,0 +1,81 @@
+<div class="d-flex justify-content-between align-items-start flex-wrap mb-4">
+    <!-- Left: Title & Description -->
+    <div>
+        <h5 class="fw-bold mb-1">Time Tracking</h5>
+        <p class="text-muted mb-0">Track your time and analyze productivity</p>
+    </div>
+
+    <!-- Right: Buttons -->
+    <div class="d-flex gap-2 mt-2 mt-sm-0">
+        <button class="btn btn-outline-secondary d-flex justify-content-between gap-2">
+            <lucide-icon name="download" class="me-1" style="width: 16px; height: 16px;"></lucide-icon>
+            Export
+        </button>
+        <button class="btn btn-primary d-flex justify-content-between gap-2">
+            <lucide-icon name="plus" class="me-1" style="width: 16px; height: 16px;"></lucide-icon>
+            Manual Entry
+        </button>
+    </div>
+</div>
+
+
+
+
+<div class="row g-3">
+    <div class="col-6 col-md-3">
+        <app-time-head-card title="Today" value="5h 15m" icon="Clock"></app-time-head-card>
+    </div>
+
+    <div class="col-6 col-md-3">
+        <app-time-head-card title="This Week" value="41.3h" icon="Calendar"></app-time-head-card>
+    </div>
+
+    <div class="col-6 col-md-3">
+        <app-time-head-card title="Avg/Day" value="5.9h" icon="TrendingUp"></app-time-head-card>
+    </div>
+
+    <div class="col-6 col-md-3">
+        <app-time-head-card title="Entries" value="5" icon="BarChart"></app-time-head-card>
+    </div>
+</div>
+
+<div class="row  mt-3">
+    <div class="col-8 bg-white rounded-3 pt-2">
+        <app-time-recent-entries></app-time-recent-entries>
+    </div>
+    <div class="col-4">
+        <!-- This Week Card -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h6 class="fw-semibold mb-3">This Week</h6>
+                <div *ngFor="let day of weekData" class="mb-2">
+                    <div class="d-flex justify-content-between">
+                        <span>{{ day.label }}</span>
+                        <span>{{ day.hours }}h</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-primary" [style.width.%]="day.percent" role="progressbar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Breakdown Card -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h6 class="fw-semibold mb-3">Project Breakdown</h6>
+                <div *ngFor="let project of projectData" class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>{{ project.name }}</span>
+                        <span>{{ project.hours }}h</span>
+                    </div>
+                    <div class="progress" style="height: 6px;">
+                        <div class="progress-bar bg-primary" [style.width.%]="project.percent" role="progressbar"></div>
+                    </div>
+                    <small class="text-muted">{{ project.percent }}%</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

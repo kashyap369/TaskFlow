@@ -1,0 +1,14 @@
+<div class="settings-card p-3 rounded-2 shadow-sm bg-white">
+  <ul class="nav flex-column gap-2 fw-medium">
+    <li class="nav-item" *ngFor="let option of settingOptions">
+      <a
+        href="javascript:void(0);"
+        class="nav-link d-flex align-items-center gap-2"
+        [ngClass]="{ active: option.isActive }"
+        (click)="setActive(option)">
+        <lucide-angular [name]="option.icon" size="18"></lucide-angular>
+        {{ option.label }}
+      </a>
+    </li>
+  </ul>
+</div>

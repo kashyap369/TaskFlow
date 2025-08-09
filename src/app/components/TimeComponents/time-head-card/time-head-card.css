@@ -1,0 +1,16 @@
+.icon-wrapper {
+  background-color: rgba(13, 110, 253, 0.1);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+lucide-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  margin-bottom: 10px;
+}

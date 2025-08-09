@@ -1,0 +1,12 @@
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+button {
+  font-size: 0.875rem;
+}
+
+lucide-angular {
+  stroke-width: 1.8;
+}

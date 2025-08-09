@@ -1,0 +1,34 @@
+<div class="card p-4 shadow-sm">
+  <div class="mb-4">
+    <h5 class="fw-bold">Data Export</h5>
+    <div class="bg-light p-3 rounded">
+      <p class="mb-3">Download all your data including tasks, projects, and time entries.</p>
+      <button class="btn btn-primary d-flex align-items-center gap-1" (click)="onExport()">
+        <lucide-angular name="Download" size="16"></lucide-angular> Export Data
+      </button>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <h5 class="fw-bold">Delete Account</h5>
+    <div class="bg-danger bg-opacity-10 p-3 rounded border border-danger">
+      <p class="text-danger mb-3">
+        This action cannot be undone. All your data will be permanently deleted.
+      </p>
+      <button class="btn btn-danger d-flex align-items-center gap-1" (click)="onDelete()">
+        <lucide-angular name="Trash" size="16"></lucide-angular> Delete Account
+      </button>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="d-flex justify-content-end gap-2">
+    <button class="btn btn-outline-secondary d-flex align-items-center gap-1" (click)="onCancel()">
+      <lucide-angular name="X" size="16"></lucide-angular> Cancel
+    </button>
+    <button class="btn btn-primary d-flex align-items-center gap-1" (click)="onSave()">
+      <lucide-angular name="Save" size="16"></lucide-angular> Save Changes
+    </button>
+  </div>
+</div>
